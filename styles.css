@@ -35,6 +35,11 @@ body {
     appearance: none;
 }
 
+.container {
+    perspective: 850px;
+    margin-bottom: 30px;
+}
+
 .seat {
     background-color: rgb(101, 101, 101);
     height: 15px;
@@ -76,7 +81,7 @@ body {
     padding: 3px 15px;
     border-radius: 6px;
     color: rgb(94, 80, 102);
-    list-style: none;
+    list-style-type: none;
     display: flex;
     justify-content: space-between;
 }
@@ -102,5 +107,14 @@ body {
     height: 100px;
     width: 100%;
     margin: 10px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 6px 11px rgb(196, 190, 190, 0.8);
 }
 
+p.text {
+    margin: 7px 0;
+}
+
+p.text span {
+    color: rgb(100, 142, 231);
+}
