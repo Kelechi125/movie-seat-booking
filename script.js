@@ -10,6 +10,10 @@ let ticketPrice = +movieSelect.value;
 const updateSelectedCount = () => {
     const selectedSeats = document.querySelectorAll(".row .seat.selected");
 
+    const seatsIndex = [...selectedSeats].map((seat)=> [...seats].indexOf(seat));
+
+    localStorage.setItem("selectedSeats", JSON.stringify(seatsIndex));
+
     const selectedSeatsCount = selectedSeats.length;
 
     count.innerText = selectedSeatsCount;
@@ -19,6 +23,7 @@ const updateSelectedCount = () => {
 // Movie select event
 movieSelect.addEventListener("change", (event) => {
     ticketPrice = +event.target.value;
+    console.log(event.target.selectedIndex, event.target.value);
     updateSelectedCount();
 })
 
